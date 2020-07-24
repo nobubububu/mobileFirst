@@ -1,0 +1,51 @@
+html {
+  font-size: 62.5%;
+  /*rem,emの基準*/
+}
+body {
+  font-size: 1.6em;
+  margin: 0 auto;
+  font-family: "Roboto Slab", serif;
+  letter-spacing: 0.2em;
+  color: #fff;
+}
+img {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+.contents {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.main-title {
+  text-align: center;
+  border-bottom: 0.2rem solid #339933;
+  letter-spacing: 0.2em;
+  display: none;
+}
+.main-text {
+  display: inline-block;
+}
+ul {
+  padding-left: 0;
+  list-style: none;
+  text-align: center;
+}
+.list {
+  padding: 1.7rem;
+  display: none;
+}
+.list a {
+  display: block;
+  color: white;
+  transition: color 0.2s;
+  text-decoration: none;
+}
+.list a:hover {
+  color: #33cc00;
+  transition: color 0.2s;
+}

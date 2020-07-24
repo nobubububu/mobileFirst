@@ -1,0 +1,150 @@
+html {
+  font-size: 62.5%;
+  /*rem,emの基準*/
+}
+body {
+  font-size: 1.6em;
+  margin: 0 auto;
+  font-family: "Roboto Slab", serif;
+  letter-spacing: 0.2em;
+  color: #fff;
+  /*background-color: #1b244b;*/
+}
+
+.header-picture {
+  filter: brightness(50%);
+  position: relative;
+  width: 100vw;
+  height: 30vh;
+}
+.page-title {
+  position: absolute;
+  top: 12.25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  border-bottom: 0.2rem solid #339933;
+}
+/*ハンバーガーメニュー*/
+/*ナビメニューのスタイルを指定*/
+nav.NavMenu {
+  position: fixed; /*表示位置を固定*/
+  z-index: 2; /*重ね順を変更*/
+  top: 0; /*表示位置を指定*/
+  left: 0; /*表示位置を指定*/
+  background: #fff; /*背景を白にする*/
+  color: #000; /*文字色を黒にする*/
+  text-align: center; /*テキストを中央揃え*/
+  width: 100vw; /*全幅表示*/
+  height: 100vh;
+  transform: translateY(-100%); /*ナビを上に隠す*/
+  transition: all 0.6s; /*アニメーションの時間を指定*/
+}
+
+nav.NavMenu ul {
+  background: #777777; /*背景をグレーにする*/
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+nav.NavMenu ul li {
+  font-size: 3rem;
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+}
+
+nav.NavMenu ul li a {
+  display: block; /*クリックできる領域を広げる*/
+  color: #fff;
+  padding: 1em 0;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+nav.NavMenu ul li a:hover {
+  color: #33cc00;
+  transition: color 0.2s;
+}
+/*トグルボタンが押されたときに付与するクラス*/
+nav.NavMenu.active {
+  transform: translateY(0%);
+}
+/*トグルボタンのスタイルを指定*/
+.Toggle {
+  display: block;
+  position: fixed; /* bodyに対しての絶対位置指定 */
+  right: 13px;
+  top: 12px;
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.Toggle span {
+  display: block;
+  position: absolute;
+  width: 30px;
+  border-bottom: solid 3px #fff;
+  -webkit-transition: 0.35s ease-in-out; /*変化の速度を指定*/
+  -moz-transition: 0.35s ease-in-out; /*変化の速度を指定*/
+  transition: 0.35s ease-in-out; /*変化の速度を指定*/
+  left: 6px;
+}
+
+.Toggle span:nth-child(1) {
+  top: 9px;
+}
+
+.Toggle span:nth-child(2) {
+  top: 18px;
+}
+
+.Toggle span:nth-child(3) {
+  top: 27px;
+}
+
+/* 最初のspanをマイナス45度に */
+.Toggle.active span:nth-child(1) {
+  top: 18px;
+  left: 6px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+/* 2番目と3番目のspanを45度に */
+.Toggle.active span:nth-child(2),
+.Toggle.active span:nth-child(3) {
+  top: 18px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 1rem;
+}
+.self-image {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  filter: brightness(120%);
+}
+.about-content p {
+  color: #8c9398;
+}
+.footer-text {
+  text-align: center;
+  background-color: #000;
+  margin: 0;
+  letter-spacing: 0;
+}
