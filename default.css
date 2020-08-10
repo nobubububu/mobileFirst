@@ -3,7 +3,7 @@ html {
   /*rem,emの基準*/
 }
 body {
-  font-size: 1.6em;
+  font-size: 1.6rem;
   margin: 0 auto;
   font-family: "Roboto Slab", serif;
   letter-spacing: 0.2em;
@@ -135,11 +135,12 @@ nav.NavMenu.active {
 }
 .self-image {
   width: 80%;
+  max-width: 350px;
   height: auto;
   margin: 0 auto;
   filter: brightness(120%);
 }
-.about-content p {
+.about-content-text {
   color: #8c9398;
 }
 
@@ -152,6 +153,10 @@ nav.NavMenu.active {
   display: flex;
   flex-direction: column;
   margin: 10px;
+}
+
+#text-space {
+  height: 10rem;
 }
 
 #button {
@@ -175,4 +180,40 @@ nav.NavMenu.active {
   background-color: #242830;
   margin: 0;
   letter-spacing: 0;
+}
+
+@media (min-width: 415px) {
+  body {
+    font-size: 2rem;
+  }
+  .input-container input,
+  label,
+  textarea {
+    font-family: inherit;
+    font-size: 100%;
+  }
+}
+
+@media (min-width: 960px) {
+  body {
+    font-size: 2.3rem;
+  }
+  .about-content {
+    flex-direction: row;
+    margin: 50px;
+  }
+  .about-content-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .contact-content {
+    margin: 0 100px;
+  }
+  .input-container input,
+  label,
+  textarea {
+    font-family: inherit;
+    font-size: 100%;
+  }
 }
