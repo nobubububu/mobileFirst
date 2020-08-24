@@ -142,6 +142,7 @@ nav.NavMenu.active {
 }
 .about-content-text {
   color: #8c9398;
+  text-align: center;
 }
 
 .contact-content {
