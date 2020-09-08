@@ -177,6 +177,10 @@ nav.NavMenu.active {
   border-bottom: none;
 }
 
+.portfolios {
+  text-align: center;
+}
+
 .footer-text {
   text-align: center;
   background-color: #242830;
